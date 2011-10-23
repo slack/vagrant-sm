@@ -37,12 +37,15 @@ end
 
 ### pre\_install\_command
 
-Commands run before SM is installed. Install deps for SM!
+Commands run before SM is installed.
 
-### add\_set
-Run after SM is installed. Use add\_set to install a set. Takes :name and :uri
-as arguments, optional :install to be run immediately after the set is
-installed. All commands specified in :install are run in the context of SM.
+Prepare the VM to be submissive (install SM deps, etc).
+
+### add\_extension
+Run after SM is installed. Use add\_extesion to install an extension. Takes
+:name and :uri as arguments, optional :install to be run immediately after the
+set is installed. All commands specified in :install are run in the context of
+SM.
 
 ### add\_set
 Run after SM is installed. Use add\_set to install a set. Takes :name and :uri

@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = '1.3.5'
 
   s.name              = 'vagrant-sm'
-  s.version           = '0.0.1'
+  s.version           = '0.0.2'
   s.rubyforge_project = 'vagrant-sm'
 
   ## Make sure your summary is short. The description may be as long
