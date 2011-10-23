@@ -1,7 +1,7 @@
 module Vagrant
   module Provisioners
     class SM < Base
-      VERSION = '0.0.1'
+      VERSION = '0.0.2'
 
       register :sm
 
@@ -92,11 +92,11 @@ module Vagrant
           ssh.sudo! "curl -L #{archive_url} -o /tmp/sm-#{version}.tar.gz"
           ssh.sudo! extract(version)
           ssh.sudo! "cd /tmp/sm-#{version} && ./install"
-          ssh.sudo! cleanup(version)
+          ssh.sudo! cleanup_install(version)
         end
       end
 
-      def cleanup(version)
+      def cleanup_install(version)
         "rm -rf /tmp/sm-#{version}.tar.gz /tmp/sm-#{version}"
       end
 
